@@ -1,0 +1,553 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
+
+  --color-navy: var(--navy);
+  --color-navy-foreground: var(--navy-foreground);
+  --color-brand-blue: var(--brand-blue);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+
+/* =========================================================
+   ROOT COLORS
+========================================================= */
+
+:root {
+  color-scheme: light;
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.25 0.03 260);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.25 0.03 260);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0.03 260);
+
+  /* Brand orange */
+  --primary: oklch(0.72 0.17 58);
+  --primary-foreground: oklch(1 0 0);
+
+  --secondary: oklch(0.96 0.005 260);
+  --secondary-foreground: oklch(0.28 0.09 262);
+
+  --muted: oklch(0.96 0.005 260);
+  --muted-foreground: oklch(0.5 0.02 260);
+
+  --accent: oklch(0.96 0.005 260);
+  --accent-foreground: oklch(0.28 0.09 262);
+
+  --destructive: oklch(0.577 0.245 27.325);
+
+  --border: oklch(0.91 0.01 260);
+  --input: oklch(0.91 0.01 260);
+
+  --ring: oklch(0.72 0.17 58);
+
+  --navy: oklch(0.27 0.09 263);
+  --navy-foreground: oklch(1 0 0);
+
+  --brand-blue: oklch(0.42 0.16 262);
+
+  --radius: 0.25rem;
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading;
+  }
+}
+
+
+/* =========================================================
+   PREMIUM SCHOOL LOGO
+========================================================= */
+
+/*
+  Main logo container
+*/
+.logo-wrapper {
+  position: relative;
+  animation: schoolLogoFloat 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+
+/*
+  Glow behind logo
+
+  IMPORTANT:
+  Your --primary is OKLCH, so we use it directly.
+*/
+.logo-glow {
+  position: absolute;
+  inset: 4px;
+
+  border-radius: 9999px;
+
+  background: color-mix(
+    in oklch,
+    var(--primary) 25%,
+    transparent
+  );
+
+  filter: blur(10px);
+
+  opacity: 0.35;
+
+  animation: schoolLogoGlow 3s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+
+/*
+  Actual logo
+*/
+.logo-image {
+  position: relative;
+  z-index: 10;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.45s ease;
+}
+
+
+/*
+  Hover
+*/
+.logo-wrapper:hover {
+  animation-play-state: paused;
+}
+
+.logo-wrapper:hover .logo-image {
+  transform: scale(1.08) rotate(2deg);
+  filter: brightness(1.08);
+}
+
+
+/* =========================================================
+   LOGO FLOAT
+========================================================= */
+
+@keyframes schoolLogoFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+
+/* =========================================================
+   LOGO GLOW
+========================================================= */
+
+@keyframes schoolLogoGlow {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 0.65;
+    transform: scale(1.08);
+  }
+}
+
+
+/* =========================================================
+   SCHOOL NAME
+   Elegant left → right sparkle (always on, not hover-gated)
+========================================================= */
+
+.school-name {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+
+  letter-spacing: 0.015em;
+  text-shadow: 0 0 10px color-mix(in oklch, var(--primary) 25%, transparent);
+}
+
+
+/*
+  Moving light across school name — yellow/gold sweep
+*/
+.school-name-shine {
+  position: absolute;
+
+  top: -40%;
+  left: -80%;
+
+  width: 30%;
+  height: 180%;
+
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    transparent 30%,
+    rgba(250, 204, 21, 0.25) 40%,
+    rgba(250, 204, 21, 0.95) 50%,
+    rgba(250, 204, 21, 0.25) 60%,
+    transparent 70%,
+    transparent 100%
+  );
+
+  transform: skewX(-20deg);
+
+  animation: schoolNameSparkle 9s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+
+/*
+  School name shine animation
+*/
+@keyframes schoolNameSparkle {
+  0% {
+    left: -80%;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  42% {
+    left: 130%;
+    opacity: 0;
+  }
+
+  100% {
+    left: 130%;
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   AFFILIATION TEXT
+========================================================= */
+
+.affiliation-text {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+
+  animation: affiliationReveal 1.2s ease-out both;
+}
+
+
+/*
+  Affiliation shine — yellow/gold sweep
+*/
+.affiliation-shine {
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 40%;
+  height: 100%;
+
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(250, 204, 21, 0.7),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  animation: affiliationSparkle 12s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   AFFILIATION REVEAL
+========================================================= */
+
+@keyframes affiliationReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================================
+   AFFILIATION SHINE
+========================================================= */
+
+@keyframes affiliationSparkle {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0.5;
+  }
+
+  45% {
+    left: 130%;
+    opacity: 0;
+  }
+
+  100% {
+    left: 130%;
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+  .logo-wrapper {
+    animation-duration: 4.5s;
+  }
+
+  .school-name {
+    font-size: 1rem;
+  }
+
+  .affiliation-text {
+    font-size: 9px;
+    letter-spacing: 0.035em;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-wrapper,
+  .logo-glow,
+  .school-name-shine,
+  .affiliation-text,
+  .affiliation-shine {
+    animation: none !important;
+  }
+
+  .logo-image {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   HERO CAROUSEL — SLIDE ENTRANCE ANIMATIONS
+   Cycled per slide: right -> zoom -> left -> top -> repeat
+========================================================= */
+
+@keyframes enterFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(70px) scale(1.04);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes enterFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-70px) scale(1.04);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes enterFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-60px) scale(1.04);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes enterZoomCenter {
+  from {
+    opacity: 0;
+    transform: scale(0.82);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.enter-right {
+  animation: enterFromRight 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.enter-left {
+  animation: enterFromLeft 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.enter-top {
+  animation: enterFromTop 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.enter-zoom {
+  animation: enterZoomCenter 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+
+/* =========================================================
+   ANNOUNCEMENT MARQUEE (carousel footer)
+========================================================= */
+
+.marquee-track {
+  animation: marqueeScroll 22s linear infinite;
+}
+
+/* Track is double-width (original + duplicate copy);
+   animating -50% -> 0% makes content flow left -> right. */
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.bell-ring {
+  animation: bellRing 2.4s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+@keyframes bellRing {
+  0%,
+  70%,
+  100% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(14deg);
+  }
+  80% {
+    transform: rotate(-12deg);
+  }
+  85% {
+    transform: rotate(8deg);
+  }
+  90% {
+    transform: rotate(-4deg);
+  }
+  95% {
+    transform: rotate(2deg);
+  }
+}
+
+
+/* =========================================================
+   HERO CAROUSEL — KEN BURNS (image breathes in/out like video)
+========================================================= */
+
+@keyframes kenBurnsBreathe {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.ken-burns {
+  animation: kenBurnsBreathe 12s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ken-burns {
+    animation: none !important;
+  }
+}
