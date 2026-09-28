@@ -109,31 +109,35 @@ import { cn } from '@/lib/utils'
 const slides = [
   {
     image: '/images/sch.png',
-    title: 'Quality Education, Brighter Tomorrows',
-    text: 'At BVM, every child gets a first-rate education and the encouragement to chase big goals while building strong character.',
+    title: 'Shaping Futures with Purpose',
+    text: 'At Ursuline Convent School, we nurture confident learners through quality education, strong values, and opportunities to discover their true potential.',
   },
   {
-    image: '/images/oath3.png',
-    title: 'Quality Education, Brighter Tomorrows',
-    text: 'At BVM, every child gets a first-rate education and the encouragement to chase big goals while building strong character.',
+    image: '/images/img.jpg',
+    title: 'Learning Beyond the Classroom',
+    text: 'Education comes alive through meaningful experiences that encourage students to explore, question, create, and grow with confidence.',
   },
   {
-    image: '/images/fr1.png',
-    title: 'Where Curious Minds Thrive',
-    text: 'Bright classrooms, caring teachers and a curriculum that makes curiosity the heart of every lesson.',
+    image: '/images/img3.jpg',
+    title: 'Inspiring Curious Young Minds',
+    text: 'With caring teachers and an engaging learning environment, we encourage curiosity, creativity, and a lifelong love for learning.',
   },
   {
-    image: '/images/prg.png',
-    title: 'Quality Education, Brighter Tomorrows',
-    text: 'At Ursuline Convent School, every child gets a first-rate education and the encouragement to chase big goals while building strong character.',
+    image: '/images/img2.jpg',
+    title: 'Building Character for Life',
+    text: 'We believe true education goes beyond academics by developing discipline, kindness, responsibility, and respect in every student.',
   },
   {
-    image: '/images/oath2.png',
-    title: 'Where Curious Minds Thrive',
-    text: 'Bright classrooms, caring teachers and a curriculum that makes curiosity the heart of every lesson.',
+    image: '/images/img8.jpg',
+    title: 'Discover. Learn. Achieve.',
+    text: 'Every child is encouraged to explore their strengths, overcome challenges, and take confident steps toward a successful future.',
+  },
+  {
+    image: '/images/img6.jpg',
+    title: 'Growing Together, Achieving Together',
+    text: 'Through a supportive school community, we help students develop confidence, leadership, and the skills they need for tomorrow.',
   },
 ]
-
 // Cycle: slide-in from right -> zoom from center -> slide-in from left -> slide-in from top -> repeat.
 // A 5th, 6th... slide just continues the same cycle (index % 4).
 const enterAnimations = ['enter-right', 'enter-zoom', 'enter-left', 'enter-top']
