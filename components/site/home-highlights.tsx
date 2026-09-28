@@ -26,12 +26,12 @@ const announcements = [
   //   {
   //     date: '26 to 31-Dec-2025',
   //     title: 'Winter break / Cold-wave closure',
-  //     image: '/images/announcements/winter-break.jpg',
+  //     image: '/images/announcements/winter-break.JPG',
   //   },
   //   {
   //     date: '3-Jan-2026',
   //     title: 'Regular school days (classes / exams)',
-  //     image: '/images/announcements/regular-day.jpg',
+  //     image: '/images/announcements/regular-day.JPG',
   //   },
 ]
 

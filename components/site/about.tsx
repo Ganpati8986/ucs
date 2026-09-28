@@ -24,7 +24,7 @@
 //       <section id="about" className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 lg:grid-cols-2 lg:px-8">
 //         <div id="gallery" className="relative">
 //           <Image
-//             src="/images/img.jpg"
+//             src="/images/img.JPG"
 //             alt="Students learning in a bright BVM classroom"
 //             width={720}
 //             height={520}
@@ -228,7 +228,7 @@ export function About() {
           className="relative"
         >
           <Image
-            src="/images/img.jpg"
+            src="/images/img.JPG"
             alt="Students learning at Ursuline Convent School"
             width={720}
             height={520}

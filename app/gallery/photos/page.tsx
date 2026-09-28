@@ -88,11 +88,11 @@ const galleryCategories: GalleryCategory[] = [
         caption: 'School Campus',
       },
       {
-        src: '/images/img2.jpg',
+        src: '/images/img2.JPG',
         caption: 'School Building',
       },
       {
-        src: '/images/img4.jpg',
+        src: '/images/img4.JPG',
         caption: 'School Premises',
       },
     ],
@@ -134,15 +134,15 @@ const galleryCategories: GalleryCategory[] = [
         caption: 'Student Activities',
       },
        {
-        src: '/images/img6.jpg',
+        src: '/images/img6.JPG',
         caption: 'Sports Day',
       },
       {
-        src: '/images/img7.jpg',
+        src: '/images/img7.JPG',
         caption: 'Outdoor Activities',
       },
       {
-        src: '/images/img8.jpg',
+        src: '/images/img8.JPG',
         caption: 'Student Activities',
       },
     ],

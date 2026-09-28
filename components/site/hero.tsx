@@ -113,27 +113,27 @@ const slides = [
     text: 'At Ursuline Convent School, we nurture confident learners through quality education, strong values, and opportunities to discover their true potential.',
   },
   {
-    image: '/images/img.jpg',
+    image: '/images/img.JPG',
     title: 'Learning Beyond the Classroom',
     text: 'Education comes alive through meaningful experiences that encourage students to explore, question, create, and grow with confidence.',
   },
   {
-    image: '/images/img3.jpg',
+    image: '/images/img3.JPG',
     title: 'Inspiring Curious Young Minds',
     text: 'With caring teachers and an engaging learning environment, we encourage curiosity, creativity, and a lifelong love for learning.',
   },
   {
-    image: '/images/img2.jpg',
+    image: '/images/img2.JPG',
     title: 'Building Character for Life',
     text: 'We believe true education goes beyond academics by developing discipline, kindness, responsibility, and respect in every student.',
   },
   {
-    image: '/images/img8.jpg',
+    image: '/images/img8.JPG',
     title: 'Discover. Learn. Achieve.',
     text: 'Every child is encouraged to explore their strengths, overcome challenges, and take confident steps toward a successful future.',
   },
   {
-    image: '/images/img6.jpg',
+    image: '/images/img6.JPG',
     title: 'Growing Together, Achieving Together',
     text: 'Through a supportive school community, we help students develop confidence, leadership, and the skills they need for tomorrow.',
   },

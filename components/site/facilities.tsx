@@ -13,7 +13,7 @@ const facilities = [
     text: 'Hands-on activities that bring classroom concepts to life and deepen understanding.',
   },
   {
-    image: '/images/img7.jpg',
+    image: '/images/img7.JPG',
     title: 'Sports',
     text: 'Games and athletics that teach teamwork, fair play, discipline and lifelong health.',
   },
