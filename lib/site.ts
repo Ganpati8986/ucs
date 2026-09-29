@@ -58,7 +58,7 @@ export const navItems: NavItem[] = [
     ],
   },
   { label: "Student's Corner", href: '/students-corner' },
-  { label: 'Mandatory Disclosure', href: '/mandatory-disclosure' },
+  { label: 'Disclosure', href: '/mandatory-disclosure' },
   { label: 'Careers', href: '/careers' },
 ]
 

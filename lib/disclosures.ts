@@ -13,14 +13,15 @@ export const disclosures: DisclosureCategory[] = [
   {
     category: 'Documents & Information',
     documents: [
-      { title: 'Affiliation / Upgradation Letter', file: '/documents/affiliationletter.pdf' },
-      { title: 'Society / Trust Registration Certificate', file: '/documents/socity.pdf' },
+      { title: 'Affiliation / Upgradation Letter', file: '/documents/af.pdf' },
+      { title: 'Society / Trust Registration Certificate', file: '/documents/socityRegistration.pdf' },
       { title: 'No Objection Certificate (NOC) by State Govt.', file: '/documents/NOC.pdf' },
-      { title: 'Recognition Certificate under RTE Act, 2009', file: '/documents/recognition-certificate.pdf' },
+      { title: 'Recognition Certificate under RTE Act, 2009', file: '/documents/RTE.pdf' },
       { title: 'Building Safety Certificate', file: '/documents/Building.pdf' },
-      { title: 'Fire Safety Certificate', file: '/documents/fire.pdf' },
-      { title: 'DEO Certificate for Self Certification', file: '/documents/deo-certificate.pdf' },
-      { title: 'Water, Health & Sanitation Certificates', file: '/documents/water-health-sanitation.pdf' },
+      { title: 'Fire Safety Certificate', file: '/documents/fire2.pdf' },
+      // { title: 'DEO Certificate for Self Certification', file: '/documents/deo-certificate.pdf' },
+      { title: 'Mandatory Disclosure', file: '/documents/mand.pdf' },
+      { title: 'Water, Health & Sanitation Certificates', file: '/documents/Water.pdf' },
     ],
   },
   {
