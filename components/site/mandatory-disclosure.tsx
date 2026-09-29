@@ -127,7 +127,7 @@ const generalInfo: { label: string; value: string }[] = [
   { label: 'Complete Address with Pin Code', value: 'P O KHALARI DISTT RANCHI JHARKHAND - 829205' },
   { label: 'Principal Name & Qualification', value: 'DR. SR. NIRMALA SAMUEL (B. Sc., B. Ed. M.Ed., Ph.D)' },
   { label: 'School Email ID', value: 'ucskhalari@gmail.com' },
-  { label: 'Contact Details', value: '8292547635' },
+  { label: 'Contact Details', value: '91131 07421' },
 ]
 
 export function MandatoryDisclosure() {
