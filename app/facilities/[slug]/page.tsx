@@ -29,7 +29,7 @@ export default async function FacilityPage({ params }: { params: Promise<{ slug:
       <section className="mx-auto grid max-w-7xl gap-12 px-4 py-20 lg:grid-cols-3 lg:px-8">
         <div className="lg:col-span-2">
           <div className="relative aspect-video overflow-hidden rounded-sm shadow-lg">
-            <Image src={facility.image} alt={`${facility.title} at BVM International School`} fill className="object-cover" sizes="(min-width: 1024px) 66vw, 100vw" />
+            <Image src={facility.image} alt={`${facility.title} at Ursuline Convent School`} fill className="object-cover" sizes="(min-width: 1024px) 66vw, 100vw" />
           </div>
           <SectionHeading eyebrow="Our Facilities" title={facility.title} className="mt-10" />
           <p className="mt-4 text-lg font-medium text-navy">{facility.summary}</p>

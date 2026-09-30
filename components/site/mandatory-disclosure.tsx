@@ -246,7 +246,7 @@ export function MandatoryDisclosure() {
         <DialogContent className="flex h-[90vh] flex-col sm:max-w-4xl">
           <DialogHeader className="pr-8">
             <DialogTitle className="text-lg font-bold text-navy">{active?.title}</DialogTitle>
-            <DialogDescription>BVM International School &middot; Mandatory Public Disclosure</DialogDescription>
+            <DialogDescription>Ursuline Convent School &middot; Mandatory Public Disclosure</DialogDescription>
           </DialogHeader>
           {active && (
             <>
