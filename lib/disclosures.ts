@@ -14,7 +14,7 @@ export const disclosures: DisclosureCategory[] = [
     category: 'Documents & Information',
     documents: [
        { title: 'Mandatory Disclosure', file: '/documents/mand.pdf' },
-      { title: 'Affiliation / Upgradation Letter', file: '/documents/affiliationletter.PDF' },
+      { title: 'Affiliation / Upgradation Letter', file: '/documents/affiliationletter.pdf' },
       { title: 'Society / Trust Registration Certificate', file: '/documents/socity.pdf'},
       { title: 'No Objection Certificate (NOC) by State Govt.', file: '/documents/NOC.pdf' },
       // { title: 'Recognition Certificate under RTE Act, 2009', file: '/documents/RTE.pdf' },
