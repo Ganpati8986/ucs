@@ -11,7 +11,7 @@ const testimonials = [
   },
   {
     quote:
-      'BVM blends kindness with strong academics. The focus on values and leadership has made a real difference to our son.',
+      'Ursuline Convent School blends kindness with strong academics. The focus on values and leadership has made a real difference to our son.',
     name: 'Parent, Class 8',
   },
   {
