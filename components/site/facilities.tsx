@@ -8,17 +8,17 @@ const EASE = [0.22, 1, 0.36, 1] as const
 
 const facilities = [
   {
-    image: '/images/7.png',
+    image: '/images/img13.jpeg',
     title: 'Extra-Curricular Activities',
     text: 'Hands-on activities that bring classroom concepts to life and deepen understanding.',
   },
   {
-    image: '/images/img7.JPG',
+    image: '/images/img11.jpeg',
     title: 'Sports',
     text: 'Games and athletics that teach teamwork, fair play, discipline and lifelong health.',
   },
   {
-    image: '/images/fr3.png',
+    image: '/images/img14.jpeg',
     title: 'Co-Curricular',
     text: 'A secure, caring setting that nurtures social, emotional, cultural and physical growth.',
   },
