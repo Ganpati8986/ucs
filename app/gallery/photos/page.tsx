@@ -72,6 +72,28 @@ const galleryCategories: GalleryCategory[] = [
       // },
     ],
   },
+    {
+    id: 'staff-activities',
+    title: 'Staff Activities',
+    photos: [
+      {
+        src: '/images/m.jpeg',
+        caption: 'In House training-Resource person- Dr. Nirmala Samuel',
+      },
+      {
+        src: '/images/m3.jpeg',
+        caption: 'In House training-Resource person- Dr. Nirmala Samuel',
+      },
+      {
+        src: '/images/m2.jpeg',
+        caption: 'In House training-Resource person- Dr. Nirmala Samuel',
+      },
+       {
+        src: '/images/m5.jpeg',
+        caption: 'In House training-Resource person- Dr. Nirmala Samuel',
+      },
+    ],
+  },
 
   {
     id: 'events',
@@ -88,7 +110,31 @@ const galleryCategories: GalleryCategory[] = [
       {
         src: '/images/img14.jpeg',
         caption: 'Classroom Activities',
-      }
+      },
+      {
+        src: '/images/vn.jpeg',
+        caption: 'Celebration of Van Mahotsav 2026',
+      },
+      {
+        src: '/images/vn4.jpeg',
+        caption: 'Celebration of Van Mahotsav 2026',
+      },
+      {
+        src: '/images/vn2.jpeg',
+        caption: 'Celebration of Van Mahotsav 2026',
+      },
+      {
+        src: '/images/vn3.jpeg',
+        caption: 'Celebration of Van Mahotsav 2026',
+      },
+        {
+        src: '/images/vn5.jpeg',
+        caption: 'Celebration of Van Mahotsav 2026',
+      },
+      {
+        src: '/images/vn6.jpeg',
+        caption: 'Celebration of Van Mahotsav 2026',
+      },
 
     ],
   },
@@ -120,6 +166,22 @@ const galleryCategories: GalleryCategory[] = [
       {
         src: '/images/img8.JPG',
         caption: 'Student Activities',
+      },
+      {
+        src: '/images/vl.jpeg',
+        caption: 'Inter School Volleyball Tournament',
+      },
+      {
+        src: '/images/vl1.jpeg',
+        caption: 'Inter School Volleyball Tournament',
+      },
+      {
+        src: '/images/vl2.jpeg',
+        caption: 'Inter School Volleyball Tournament',
+      },
+      {
+        src: '/images/vl3.jpeg',
+        caption: 'Inter School Volleyball Tournament',
       },
     ],
   },
@@ -684,8 +746,8 @@ function CategoryButton({
         scale: 0.96,
       }}
       className={`rounded-full px-5 py-2.5 text-sm font-bold transition-colors ${active
-          ? 'bg-primary text-primary-foreground shadow-md'
-          : 'bg-muted text-navy hover:bg-primary/10'
+        ? 'bg-primary text-primary-foreground shadow-md'
+        : 'bg-muted text-navy hover:bg-primary/10'
         }`}
     >
       {children}
